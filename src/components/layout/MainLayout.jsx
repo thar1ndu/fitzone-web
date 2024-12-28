@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from './Footer'
-import Header from './Header'
 import ScrollToTop from './ScrollToTop'
 import Navbar from './Navbar'
 
@@ -11,7 +10,7 @@ function MainLayout({children}) {
             <Navbar />
 
             {/* Main Content */}
-            <main className="flex-grow pt-16 container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <main>
                 {children}
             </main>
 

@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="bg-red-700 text-white py-4">
     <div className="container mx-auto text-center">
-      © 2024 My Website | All Rights Reserved
+      © 2024 FitZone | All Rights Reserved
     </div>
   </footer>
   )

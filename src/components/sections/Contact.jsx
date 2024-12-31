@@ -127,7 +127,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 ${
                       errors.message ? 'border-red-500' : 'border-gray-300'
                     }`}
                   ></textarea>
@@ -136,7 +136,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition duration-300"
+                  className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300"
                 >
                   Send Message
                 </button>
@@ -149,21 +149,21 @@ const Contact = () => {
               <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-purple-600 mr-3" />
+                  <MapPin className="h-6 w-6 text-red-600 mr-3" />
                   <div>
                     <h4 className="font-semibold">Address</h4>
                     <p className="text-gray-600">123 Fitness Street, Gym City, GC 12345</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-purple-600 mr-3" />
+                  <Phone className="h-6 w-6 text-red-600 mr-3" />
                   <div>
                     <h4 className="font-semibold">Phone</h4>
                     <p className="text-gray-600">(555) 123-4567</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Mail className="h-6 w-6 text-purple-600 mr-3" />
+                  <Mail className="h-6 w-6 text-red-600 mr-3" />
                   <div>
                     <h4 className="font-semibold">Email</h4>
                     <p className="text-gray-600">info@fitzone.com</p>

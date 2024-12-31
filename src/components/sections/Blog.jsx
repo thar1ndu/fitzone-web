@@ -41,10 +41,10 @@ const Blog = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <div className="text-sm text-purple-600 mb-2">{post.category}</div>
+                <div className="text-sm text-red-600 mb-2">{post.category}</div>
                 <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <button className="text-purple-600 font-semibold hover:text-purple-700">
+                <button className="text-red-600 font-semibold hover:text-red-700">
                   Read More →
                 </button>
               </div>

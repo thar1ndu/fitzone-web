@@ -53,11 +53,11 @@ const Membership = () => {
             <div
               key={index}
               className={`bg-white rounded-lg shadow-md overflow-hidden ${
-                plan.popular ? 'ring-2 ring-purple-600 transform scale-105' : ''
+                plan.popular ? 'ring-2 ring-red-600 transform scale-105' : ''
               }`}
             >
               {plan.popular && (
-                <div className="bg-purple-600 text-white text-center py-2">
+                <div className="bg-red-600 text-white text-center py-2">
                   Most Popular
                 </div>
               )}
@@ -70,14 +70,14 @@ const Membership = () => {
                 <ul className="space-y-4">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <Check className="h-5 w-5 text-purple-600 mr-2" />
+                      <Check className="h-5 w-5 text-red-600 mr-2" />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <button className={`w-full mt-8 px-4 py-2 rounded-lg font-semibold transition duration-300 ${
                   plan.popular
-                    ? 'bg-purple-600 text-white hover:bg-purple-700'
+                    ? 'bg-red-600 text-white hover:bg-red-700'
                     : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
                 }`}>
                   Get Started

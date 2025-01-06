@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {
+  const navigate = useNavigate();
   const posts = [
     {
       title: '10 Essential Exercises for Building Muscle',
@@ -50,6 +52,14 @@ const Blog = () => {
               </div>
             </article>
           ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <button 
+            onClick={() => navigate("/blog")} 
+            className="inline-flex items-center px-10 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300"
+          >
+            More
+          </button>
         </div>
       </div>
     </section>

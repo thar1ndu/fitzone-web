@@ -5,7 +5,7 @@ const Membership = () => {
   const plans = [
     {
       name: 'Basic',
-      price: '29',
+      price: '5000',
       features: [
         'Access to gym equipment',
         'Locker room access',
@@ -15,7 +15,7 @@ const Membership = () => {
     },
     {
       name: 'Premium',
-      price: '59',
+      price: '9500',
       features: [
         'All Basic features',
         'Full access 24/7',
@@ -27,7 +27,7 @@ const Membership = () => {
     },
     {
       name: 'Elite',
-      price: '99',
+      price: '14000',
       features: [
         'All Premium features',
         'Unlimited group classes',
@@ -64,7 +64,7 @@ const Membership = () => {
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-center mb-4">{plan.name}</h3>
                 <div className="text-center mb-8">
-                  <span className="text-4xl font-bold">${plan.price}</span>
+                  <span className="text-3xl font-bold">LKR{plan.price}</span>
                   <span className="text-gray-600">/month</span>
                 </div>
                 <ul className="space-y-4">

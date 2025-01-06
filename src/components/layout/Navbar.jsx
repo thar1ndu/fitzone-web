@@ -15,10 +15,25 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
+    const isHomePage = window.location.pathname === '/';
+    
+    if (!isHomePage) {
+      window.location.href = `/#${sectionId}`;
+    }
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+    
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const sectionId = hash.substring(1);
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${

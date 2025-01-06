@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
@@ -6,6 +7,9 @@ const scrollToSection = (sectionId) => {
 };
 
 const Hero = () => {
+  
+  const navigate = useNavigate();
+
   return (
     <section id="home" className="relative h-screen flex items-center">
       <div
@@ -28,7 +32,7 @@ const Hero = () => {
           Join FitZone and start your fitness journey today. Expert trainers, state-of-the-art equipment, and a supportive community await you.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
+          <button onClick={() => navigate('/auth')} className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
             Get Started
           </button>
           <button onClick={()=> {scrollToSection("contact")}} className="flex items-center justify-center gap-2 bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">

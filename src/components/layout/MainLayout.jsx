@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 function MainLayout({children}) {
     return (
         <div className="flex flex-col min-h-screen">
-            {/* Header with fixed Navbar */}
+            {/* fixed Navbar */}
             <Navbar />
 
             {/* Main Content */}

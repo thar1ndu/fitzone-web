@@ -13,7 +13,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/single-blog" element={<SingleBlog />} />
+          <Route path="/blog/:id" element={<SingleBlog />} />
       </Routes>
         </MainLayout>
     </Router>

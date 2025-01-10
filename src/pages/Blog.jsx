@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Blog() {
+  const [posts, setPosts] = React.useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+        try {
+            const response = await fetch('/api/blog/all.php');
+            const data = await response.json();
+            if (data.status === 'success') {
+              setPosts(data.data);
+            } else {
+                setError(data.message);
+            }
+        } catch (error) {
+            setError('Error fetching blogs');
+        }
+    };
+
+    fetchBlogs();
+}, []);
+
   const blogPosts = [
     {
       id: 1,
@@ -85,11 +106,12 @@ function Blog() {
     }
   ];
 
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <h1 className="text-4xl font-bold text-center mb-12">Fitness Blog</h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
+        {posts.map((post) => (
           <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img
               src={post.image}
@@ -98,18 +120,20 @@ function Blog() {
             />
             <div className="p-6">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-red-600 text-sm font-semibold">{post.category}</span>
-                <span className="text-gray-500 text-sm">{post.date}</span>
+                {/* <span className="text-red-600 text-sm font-semibold">{post.category}</span> */}
+                {/* <span className="text-gray-500 text-sm">{post.date}</span> */}
               </div>
               <h2 className="text-xl font-bold mb-2 hover:text-red-600 transition-colors duration-200">
                 {post.title}
               </h2>
-              <p className="text-gray-600 mb-4">{post.excerpt}</p>
+              <p className="text-gray-600 mb-4">{post.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500">By {post.author}</span>
+                <span className="text-sm text-gray-500">By {post.name}</span>
+                <Link to={`/blog/${post.id}`}>
                 <button className="text-red-600 hover:text-red-700 font-semibold">
                   Read More →
                 </button>
+                </Link>
               </div>
             </div>
           </article>

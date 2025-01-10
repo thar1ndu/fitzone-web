@@ -79,7 +79,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 ${
                       errors.name ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -96,7 +96,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 ${
                       errors.email ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -113,7 +113,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:red-purple-600"
                   />
                 </div>
 
@@ -152,21 +152,21 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-red-600 mr-3" />
                   <div>
                     <h4 className="font-semibold">Address</h4>
-                    <p className="text-gray-600">123 Fitness Street, Gym City, GC 12345</p>
+                    <p className="text-gray-600">123 okapathana Street, kurunegala.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="h-6 w-6 text-red-600 mr-3" />
                   <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-gray-600">076-32713677</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Mail className="h-6 w-6 text-red-600 mr-3" />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-600">info@fitzone.com</p>
+                    <p className="text-gray-600">fitzone@gmail.com</p>
                   </div>
                 </div>
               </div>
